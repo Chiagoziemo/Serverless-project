@@ -32,9 +32,8 @@ export class TodosAccess {
             }
         })
         .promise()
-
-        const items = result.Items
-        return items as TodoItem[]
+        
+        return result.Items as TodoItem[]
     }
 
     async createTodoItem(todoItem: TodoItem): Promise<TodoItem> {
